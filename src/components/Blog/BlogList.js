@@ -6,6 +6,7 @@ import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
+import './blog.css'
 
 export default function BlogList(prop) {
 
@@ -22,27 +23,27 @@ export default function BlogList(prop) {
     <>
         {console.log(posts)}
         <h1>Blog list</h1>
-        <Link to='/blogpost'>
         <Container fluid>
-        <Row>
+        <Row className='blogRow'>
         {posts.map(post => (
             
-            <Col xs={4}>
+            <Col xs={4} className='cardColumn'>
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={post.thumbnail} />
                 <Card.Body>
                     <Card.Title>{post.title}</Card.Title>
-                    <Card.Text>
+                    <Card.Text className='cardText'>
                     {post.content}
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Link to='/blogpost/:1'>
+                       <Button variant="primary">Go somewhere</Button>
+                    </Link>
                 </Card.Body>
             </Card>
             </Col>
         ))}
         </Row>
         </Container>
-        </Link>
     </>
   )
 }
