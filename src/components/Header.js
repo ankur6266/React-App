@@ -14,9 +14,9 @@ export default function Header(){
      <Navbar className="bg-body-tertiary mb-3">
      <Container fluid>
     
-    <Link to="/">
-     <Navbar.Brand href="#">Logo</Navbar.Brand>
-    </Link>
+    {/* <Link to="/"> */}
+     <Navbar.Brand href="/">Logo</Navbar.Brand>
+    {/* </Link> */}
     
      <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-xl`} />
      <Navbar.Offcanvas
