@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Include Slick Carousel JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+<style>
+    #div_block-109-15462 {
+        /* align-items: stretch;
+        grid-template-columns: repeat(8, minmax(1px, 1fr));
+        grid-column-gap: 20px;
+        grid-row-gap: 20px; */
+        display: grid;
+    }
+
+    .ft-headline {
+        padding-bottom: 20px;
+    }
+
+    @media (max-width: 876px) {
+        #div_block-109-15462 {
+            /* grid-template-columns: repeat(4, minmax(1px, 1fr)); */
+        }
+    }
+
+    .ct-image {
+        /* width: 100% !important;
+        height: 100% !important; */
+    }
+
+
+
+    @media (max-width: 410px) {
+
+        #div_block-109-15462 {
+            align-items: stretch;
+            /* grid-template-columns: repeat(2, minmax(1px, 1fr)); */
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+            display: grid;
+            padding-left: auto;
+            padding-right: auto;
+        }
+    }
+
+    .ct-section-inner-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ct-section-inner-wrap {
+        align-items: center;
+    }
+</style>
+
+<body>
+    <h2 class="ft-headline">RESHMA BEAUTY® HAS BEEN FEATURED ON:</h2>
+    <div class="ct-section-inner-wrap">
+        <div id="div_block-109-15462" class="ct-div-block logo-slider">
+            <img id="image-111-15462" alt=""
+                src="https://cdn.shopify.com/s/files/1/0616/9791/7150/files/WWD-Logo.jpg?v=1660077432"
+                class="ct-image"><img id="image-112-15462" alt=""
+                src="https://cdn.shopify.com/s/files/1/0616/9791/7150/files/The-View-Logo.jpg?v=1660077396"
+                class="ct-image"><img id="image-113-15462" alt=""
+                src="https://cdn.shopify.com/s/files/1/0616/9791/7150/files/Skin-Safe-Logo.jpg?v=1660077374"
+                class="ct-image"><img id="image-114-15462" alt=""
+                src="https://cdn.shopify.com/s/files/1/0616/9791/7150/files/Obvious-Logo.jpg?v=1660077208"
+                class="ct-image"><img id="image-115-15462" alt=""
+                src="https://cdn.shopify.com/s/files/1/0616/9791/7150/files/Lifetime-Logo.jpg?v=1660077072"
+                class="ct-image"><img id="image-116-15462" alt=""
+                src="https://cdn.shopify.com/s/files/1/0616/9791/7150/files/KTLA-5-Logo.jpg?v=1660077053"
+                class="ct-image"><img id="image-117-15462" alt=""
+                src="https://cdn.shopify.com/s/files/1/0616/9791/7150/files/Extra-Logo.jpg?v=1660077001"
+                class="ct-image"><img id="image-118-15462" alt=""
+                src="https://cdn.shopify.com/s/files/1/0616/9791/7150/files/Brown-Girl-Magazine-Logo.jpg?v=1660076986"
+                class="ct-image">
+
+
+        </div>
+
+
+
+    </div>
+
+    <script>
+        // Initialize Slick Slider with automatic sliding and navigation controls
+        $(document).ready(function () {
+            $('.logo-slider').slick({
+                slidesToShow: 6,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000, // Time in milliseconds between slides,
+                prevArrow: $('.slider-controls .prev'),
+                nextArrow: $('.slider-controls .next')
+            });
+        });
+    </script>
+
+</body>
+
+</html>

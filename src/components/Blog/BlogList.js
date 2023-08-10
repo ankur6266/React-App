@@ -8,26 +8,27 @@ import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
 import './blog.css'
 
-export default function BlogList(prop) {
+export default function BlogList({posts}) {
 
-    const [posts, setPost] = useState([])
+    // const [posts, setPost] = useState([])
 
-    useEffect(() => {
-      axios.get('https://647073633de51400f724471f.mockapi.io/posts')
-      .then((response) => setPost(response.data))
-      .catch((error) => console.log('Error fetching data:', error));
+    // useEffect(() => {
+    //   axios.get('https://647073633de51400f724471f.mockapi.io/posts')
+    //   .then((response) => setPost(response.data))
+    //   .catch((error) => console.log('Error fetching data:', error));
   
-    }, []);
+    // }, []);
 
   return (
     <>
-        {console.log(posts)}
         <h1>Blog list</h1>
         <Container fluid>
         <Row className='blogRow'>
         {posts.map(post => (
             
             <Col xs={4} className='cardColumn'>
+            
+            <Link to={`/post/${post.id}`}>
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={post.thumbnail} />
                 <Card.Body>
@@ -40,6 +41,8 @@ export default function BlogList(prop) {
                     </Link>
                 </Card.Body>
             </Card>
+            </Link>
+
             </Col>
         ))}
         </Row>

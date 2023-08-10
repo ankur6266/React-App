@@ -4,15 +4,26 @@ import { Image } from 'react-bootstrap';
 import BlogList from './Blog/BlogList';
 import Header from './Header';
 import Blog from './Blog/Blog';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 export default function Home() {
+
+  const [posts, setPost] = useState([])
+
+  useEffect(() => {
+    axios.get('https://647073633de51400f724471f.mockapi.io/posts')
+    .then((response) => setPost(response.data))
+    .catch((error) => console.log('Error fetching data:', error));
+
+  }, []);
 
   return (
     <>
         <Header />
         <CarouselFadeExample />
-        <BlogList />
-        <Blog />
+        <BlogList posts={posts}/>
+        <Blog posts={posts}/>
     </>
   ) 
 }
