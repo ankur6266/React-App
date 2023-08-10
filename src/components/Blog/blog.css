@@ -7,9 +7,10 @@
     /* padding: 0; */
     /* margin: 1em; */
     text-decoration: none;
-    text-align: justify;
 }
-
+.blogLink{
+    text-decoration: none;
+}
 .cardText{
     overflow: hidden;
     display: -webkit-box;

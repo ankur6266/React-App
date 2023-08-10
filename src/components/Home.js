@@ -15,7 +15,6 @@ export default function Home() {
     axios.get('https://647073633de51400f724471f.mockapi.io/posts')
     .then((response) => setPost(response.data))
     .catch((error) => console.log('Error fetching data:', error));
-
   }, []);
 
   return (
@@ -23,7 +22,6 @@ export default function Home() {
         <Header />
         <CarouselFadeExample />
         <BlogList posts={posts}/>
-        <Blog posts={posts}/>
     </>
   ) 
 }

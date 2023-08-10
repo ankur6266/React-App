@@ -16,7 +16,7 @@ export default function BlogList({posts}) {
         <Row className='blogRow'>
         {posts.map(post => ( 
             <Col lg={4} className='cardColumn'>
-            <Link to={`/post/${post.id}`}>
+            <Link to={`/post/${post.id}`} className='blogLink'>
             <Card>
                 <Card.Img variant="top" src={post.thumbnail} />
                 <Card.Body>
