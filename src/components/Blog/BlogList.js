@@ -1,35 +1,23 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'; 
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
-import './blog.css'
+import './blog.css' 
 
 export default function BlogList({posts}) {
-
-    // const [posts, setPost] = useState([])
-
-    // useEffect(() => {
-    //   axios.get('https://647073633de51400f724471f.mockapi.io/posts')
-    //   .then((response) => setPost(response.data))
-    //   .catch((error) => console.log('Error fetching data:', error));
-  
-    // }, []);
 
   return (
     <>
         <h1>Blog list</h1>
-        <Container fluid>
+        <Container>
         <Row className='blogRow'>
-        {posts.map(post => (
-            
-            <Col xs={4} className='cardColumn'>
-            
+        {posts.map(post => ( 
+            <Col lg={4} className='cardColumn'>
             <Link to={`/post/${post.id}`}>
-            <Card style={{ width: '18rem' }}>
+            <Card>
                 <Card.Img variant="top" src={post.thumbnail} />
                 <Card.Body>
                     <Card.Title>{post.title}</Card.Title>
@@ -42,7 +30,6 @@ export default function BlogList({posts}) {
                 </Card.Body>
             </Card>
             </Link>
-
             </Col>
         ))}
         </Row>

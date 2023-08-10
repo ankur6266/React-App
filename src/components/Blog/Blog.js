@@ -11,7 +11,6 @@ export default function Blog({posts}) {
   return (
     <>  
         <Header />
-        {console.log(postId)}
         {
           post ? (
             <div>

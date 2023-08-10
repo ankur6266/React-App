@@ -6,14 +6,18 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-
+import { Link } from 'react-router-dom';
 
 export default function Header(){
     return(
          <>
      <Navbar className="bg-body-tertiary mb-3">
      <Container fluid>
+    
+    <Link to="/">
      <Navbar.Brand href="#">Logo</Navbar.Brand>
+    </Link>
+    
      <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-xl`} />
      <Navbar.Offcanvas
          id={`offcanvasNavbar-expand-xl`}
