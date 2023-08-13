@@ -1,0 +1,7 @@
+.WriteBlogSection .container{
+    margin: 10px auto;
+    text-align: center;
+    padding: 5em 0;
+    background: rgb(243, 243, 243);
+    border: 1px solid rgb(190, 190, 190);
+}

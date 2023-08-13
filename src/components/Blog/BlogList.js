@@ -5,31 +5,32 @@ import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
-import './blog.css' 
+import '../../assets/styles/blog.css' 
+import Header from '../Header';
 
 export default function BlogList({posts}) {
 
   return (
     <>
+        <Header />
         <h1>Blog list</h1>
         <Container>
         <Row className='blogRow'>
         {posts.map(post => ( 
             <Col lg={4} className='cardColumn'>
-            <Link to={`/post/${post.id}`} className='blogLink'>
+            
             <Card>
                 <Card.Img variant="top" src={post.thumbnail} />
                 <Card.Body>
                     <Card.Title>{post.title}</Card.Title>
                     <Card.Text className='cardText'>
                     {post.content}
-                    </Card.Text>
-                    <Link to='/blogpost/:1'>
-                       <Button variant="primary">Go somewhere</Button>
-                    </Link>
+                    </Card.Text>          
+                       <Link to={`/post/${post.id}`} className='btn btn-primary'>Read More</Link>
+          
                 </Card.Body>
             </Card>
-            </Link>
+            
             </Col>
         ))}
         </Row>

@@ -26,13 +26,13 @@ export default function Header(){
      >
          <Offcanvas.Header closeButton>
          <Offcanvas.Title id={`offcanvasNavbarLabel-expand-xl`}>
-             Logo
+            <Nav.Link href='/'>Logo</Nav.Link>
          </Offcanvas.Title>
          </Offcanvas.Header>
          <Offcanvas.Body>
          <Nav className="justify-content-center flex-grow-1 pe-3">
-             <Nav.Link href="#action1">Home</Nav.Link>
-             <Nav.Link href="#action2">Link</Nav.Link>
+             <Nav.Link href='/'>Home</Nav.Link>
+             <Nav.Link href={`/bloglist`}>Blogs</Nav.Link>
              <NavDropdown
              title="Dropdown"
              id={`offcanvasNavbarDropdown-expand-xl`}

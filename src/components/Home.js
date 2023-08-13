@@ -1,11 +1,12 @@
 import Carousel from 'react-bootstrap/Carousel';
 // import ExampleCarouselImage from 'components/ExampleCarouselImage';
-import { Image } from 'react-bootstrap';
+import { Card, Image } from 'react-bootstrap';
 import BlogList from './Blog/BlogList';
 import Header from './Header';
 import Blog from './Blog/Blog';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
 
@@ -20,13 +21,14 @@ export default function Home() {
   return (
     <>
         <Header />
-        <CarouselFadeExample />
-        <BlogList posts={posts}/>
+        <CarouselSection />
+        {/* <BlogList posts={posts}/> */}
+        <WriteBlogSection />
     </>
   ) 
 }
 
-function CarouselFadeExample() {
+function CarouselSection() {
   return (
     <Carousel fade>
       <Carousel.Item>
@@ -54,4 +56,17 @@ function CarouselFadeExample() {
       </Carousel.Item>
     </Carousel>
   );
+  }
+
+function WriteBlogSection(){
+    return(
+      <>
+      <div className='WriteBlogSection'>
+        <div className='container'>
+        <div>This is some text within a card body.</div>
+        <Link to={`/writeBlog`} className='btn btn-primary' target='_blank'>Write Blog</Link>
+        </div>
+      </div>
+      </>
+    )
   }

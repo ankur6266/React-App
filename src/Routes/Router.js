@@ -3,6 +3,8 @@ import Blog from '../components/Blog/Blog'
 import { Route, Routes } from 'react-router-dom'
 import Home from '../components/Home'
 import axios from 'axios'
+import BlogList from '../components/Blog/BlogList'
+import WriteBlog from '../components/WriteBlog/WriteBlog'
 export default function Router() {
   
   const [posts, setPost] = useState([])
@@ -18,6 +20,8 @@ export default function Router() {
     <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/post/:postId" element={<Blog  posts={posts}/>} />
+        <Route path="/bloglist" element={<BlogList posts={posts} />} />
+        <Route path="/writeBlog" element={<WriteBlog /> } />
     </Routes>
   )
 }
