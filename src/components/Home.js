@@ -64,7 +64,7 @@ function WriteBlogSection(){
       <div className='WriteBlogSection'>
         <div className='container'>
         <div>This is some text within a card body.</div>
-        <Link to={`/writeBlog`} className='btn btn-primary' target='_blank'>Write Blog</Link>
+        <Link to={`/writeBlog`} className='btn btn-primary' target=''>Write Blog</Link>
         </div>
       </div>
       </>
