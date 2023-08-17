@@ -47,12 +47,12 @@ export default function WriteBlog() {
     }
     else{
     
-      // axios
-      // .post('https://647073633de51400f724471f.mockapi.io/posts', blogInfo)
-      // .then((response) => {
-      //   console.log(response);
-      // })
-      // .catch((error) => console.log('Error in posting data:', error));
+      axios
+      .post('https://647073633de51400f724471f.mockapi.io/posts', blogInfo)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => console.log('Error in posting data:', error));
 
       toggleShowB();
       console.log(blogInfo);
