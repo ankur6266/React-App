@@ -7,7 +7,10 @@ import axios from 'axios';
 export default function WriteBlog() {
 
   const [showA, setShowA] = useState(false);
+  const [showB, setShowB] = useState(false);
+
   const toggleShowA = () => setShowA(!showA);
+  const toggleShowB = () => setShowB(!showB);
 
   const [blogInfo, setBlogInfo] = useState({
     // thumbnail: '',
@@ -42,14 +45,20 @@ export default function WriteBlog() {
     if(blogInfo.title.length === 0 || blogInfo.content.length === 0){
       toggleShowA();
     }
+    else{
+    
+      // axios
+      // .post('https://647073633de51400f724471f.mockapi.io/posts', blogInfo)
+      // .then((response) => {
+      //   console.log(response);
+      // })
+      // .catch((error) => console.log('Error in posting data:', error));
 
-    axios
-      .post('https://647073633de51400f724471f.mockapi.io/posts', blogInfo)
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => console.log('Error in posting data:', error));
-    console.log(blogInfo);
+      toggleShowB();
+      console.log(blogInfo);
+
+    }
+  
   };
 
   return (
@@ -95,8 +104,12 @@ export default function WriteBlog() {
               Post
             </button>
             
-          <Toast className='toastBody' onClose={toggleShowA} show={showA} animation={true}>
+          <Toast className='warn-toastBody' onClose={toggleShowA} show={showA} animation={true}>
           <Toast.Body>Please enter 'Blog Title' and 'Blog Content'</Toast.Body>
+          </Toast>
+
+          <Toast className='success-toastBody' onClose={toggleShowB} show={showB} animation={true}>
+          <Toast.Body>Blopg Posted</Toast.Body>
           </Toast>
 
           </div>
