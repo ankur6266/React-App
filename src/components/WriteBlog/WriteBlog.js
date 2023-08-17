@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Toast } from 'react-bootstrap';
 import Header from '../Header';
+import '../../assets/styles/writeBlog.css'
 import axios from 'axios';
 
 export default function WriteBlog() {
+
+  const [showA, setShowA] = useState(false);
+  const toggleShowA = () => setShowA(!showA);
+
   const [blogInfo, setBlogInfo] = useState({
-    thumbnail: '',
+    // thumbnail: '',
     title: '',
     content: '',
   });
@@ -34,6 +39,10 @@ export default function WriteBlog() {
     // formData.append('title', blogInfo.title);
     // formData.append('content', blogInfo.content);
 
+    if(blogInfo.title.length === 0 || blogInfo.content.length === 0){
+      toggleShowA();
+    }
+
     axios
       .post('https://647073633de51400f724471f.mockapi.io/posts', blogInfo)
       .then((response) => {
@@ -49,7 +58,7 @@ export default function WriteBlog() {
       <Container>
         <Row>
           <div className="col-lg-8 col-sm-12">
-            <div className="form-floating mb-3">
+            <div className="form mb-3">
               <input
                 type="text"
                 className="form-control"
@@ -59,10 +68,9 @@ export default function WriteBlog() {
                 placeholder="Blog Title"
                 onChange={handleChange}
               />
-              <label htmlFor="floatingInput">Blog Title</label>
             </div>
-            <div className="form-floating">
-              <textarea
+            <div className="form">
+              <textarea rows="10"
                 className="form-control"
                 placeholder="Blog Content"
                 name="content"
@@ -79,15 +87,23 @@ export default function WriteBlog() {
                 type="file"
                 className="form-control"
                 name="thumbnail"
-                onChange={handleChange}
+                onChange={handleFileChange}
               />
             </div>
+
+            <button className="btn btn-primary m-3" onClick={handleSubmit}>
+              Post
+            </button>
+            
+          <Toast className='toastBody' onClose={toggleShowA} show={showA} animation={true}>
+          <Toast.Body>Please enter 'Blog Title' and 'Blog Content'</Toast.Body>
+          </Toast>
+
           </div>
-          <button className="btn btn-primary" onClick={handleSubmit}>
-            Post
-          </button>
+
         </Row>
       </Container>
+
     </>
   );
 }
