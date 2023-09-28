@@ -17,3 +17,14 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
 }
+
+.mainBox{
+    /* hie */
+    /* display: flex; */
+    margin: auto;
+    /* justify-content: center; */
+}
+.inner{
+    width: 50%;
+    /* margin: auto; */
+}

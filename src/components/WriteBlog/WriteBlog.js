@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Toast } from 'react-bootstrap';
-import Header from '../Header';
+import Header from '../Header/Header';
 import '../../assets/styles/writeBlog.css'
 import axios from 'axios';
 

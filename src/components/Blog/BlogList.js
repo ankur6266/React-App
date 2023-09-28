@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
 import '../../assets/styles/blog.css' 
-import Header from '../Header';
+import Header from '../Header/Header';
 
 export default function BlogList({posts}) {
 
@@ -35,6 +35,13 @@ export default function BlogList({posts}) {
         ))}
         </Row>
         </Container>
+        <div className='mainBox'>
+
+          <div className='inner'>one</div>
+          <div className='inner'>two</div>
+
+
+        </div>
     </>
   )
 }

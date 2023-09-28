@@ -1,0 +1,32 @@
+.customHeader nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.customHeader nav a{
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.dropMenu{
+    display: inline-block;
+    position: relative;
+    /* flex-direction: column; */
+}
+.dropContainer{
+    display: none;
+    position: absolute;
+    border: 1px solid grey;
+    background: rgb(253, 253, 253);
+    z-index: 2;
+}
+.dropMenu .dropContainer a{
+    display: flex;
+    flex-direction: column;
+    padding: .2em 1em;
+}
+
+.dropMenu:hover .dropContainer{
+    display: block;
+}

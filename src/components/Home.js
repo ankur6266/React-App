@@ -2,7 +2,7 @@ import Carousel from 'react-bootstrap/Carousel';
 // import ExampleCarouselImage from 'components/ExampleCarouselImage';
 import { Card, Image } from 'react-bootstrap';
 import BlogList from './Blog/BlogList';
-import Header from './Header';
+import Header, { CustomHeader } from './Header/Header';
 import Blog from './Blog/Blog';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -21,6 +21,7 @@ export default function Home() {
   return (
     <>
         <Header />
+        <CustomHeader />
         <CarouselSection />
         {/* <BlogList posts={posts}/> */}
         <WriteBlogSection />

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Image } from 'react-bootstrap';
-import Header from '../Header';
+import Header from '../Header/Header';
 import { useParams } from 'react-router-dom';
 
 export default function Blog({posts}) {
