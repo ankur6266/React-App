@@ -26,11 +26,13 @@ const Navigations = [
         dropDowns: [
             {
                 id: "d1",
-                name: "drop1"
+                name: "drop1",
+                link: "/"
             },
             {
                 id: "d2",
-                name: "drop2"
+                name: "drop2",
+                link: "/"
             }
         ]
     }
@@ -118,14 +120,14 @@ export function CustomHeader() {
                 {
                     return(
                         <div className='dropMenu'>
-                        <a href={nav.link} className='dropNavItem'>{nav.name}</a>
-                        <div className='dropContainer'>
-                            {nav.dropDowns.map(dropItem => {    
-                                return(
-                                    <a href={dropItem.link}>{dropItem.name}</a>
-                                )
-                            })}
-                        </div>
+                            <a href={nav.link} className='dropNavItem'>{nav.name}</a>
+                            <div className='dropContainer'>
+                                {nav.dropDowns.map(dropItem => {    
+                                    return(
+                                        <a href={dropItem.link}>{dropItem.name}</a>
+                                    )
+                                })}
+                            </div>
                         </div>
                     )
                 }

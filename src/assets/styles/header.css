@@ -12,21 +12,28 @@
 .dropMenu{
     display: inline-block;
     position: relative;
+    
     /* flex-direction: column; */
 }
 .dropContainer{
     display: none;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
     position: absolute;
     border: 1px solid grey;
     background: rgb(253, 253, 253);
     z-index: 2;
 }
 .dropMenu .dropContainer a{
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
     padding: .2em 1em;
+    text-align: center;
 }
 
 .dropMenu:hover .dropContainer{
-    display: block;
+    display: flex;
+    
 }
