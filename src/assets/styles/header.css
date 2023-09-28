@@ -15,6 +15,7 @@
     
     /* flex-direction: column; */
 }
+
 .dropContainer{
     display: none;
     /* display: flex; */
@@ -35,5 +36,4 @@
 
 .dropMenu:hover .dropContainer{
     display: flex;
-    
 }
