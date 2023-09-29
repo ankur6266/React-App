@@ -39,9 +39,6 @@ const Navigations = [
 ];
 
 
-
-
-
 export default function Header() {
 
   return (

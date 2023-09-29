@@ -7,6 +7,7 @@ import Blog from './Blog/Blog';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Footer from './Footer/Footer';
 
 export default function Home() {
 
@@ -24,6 +25,7 @@ export default function Home() {
         <CarouselSection />
         {/* <BlogList posts={posts}/> */}
         <WriteBlogSection />
+        <Footer />
     </>
   ) 
 }
